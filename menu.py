@@ -1,7 +1,6 @@
-import client, server, sys
+import client, sys, subprocess
 import threading
 from threading import Thread
-
 from random import randint
 
 print (30 * '-')
@@ -19,18 +18,20 @@ choice = raw_input('Digite a sua escolha [1-3] : ')
 choice = int(choice)
 
 ### Take action as per selected menu-option ###
-#while choice != 3:
-if choice == 1:
-    port = randint(4000, 9000)
-    print port
-    Thread(target = server.chat(port)).start()
-    Thread(target = client.chat("localhost", port)).start()
-    #sys.argv = ['chat_server.py', port]
-    #execfile('chat_server.py')
-    #chat_client.chat_client("localhost", 01)
-elif choice == 2:
-    client.chat("localhost", port)
-elif choice == 3:
-    print ("Tchau!")
-else:    ## default ##
-    print ("Invalid number. Try again...")
+while choice != 3:
+    if choice == 1:
+        #Cria uma nova sala (porta) para conexao
+        port = randint(4000, 9000)
+        print port
+        #Cria um server nesse com essa porta, mas nao mantem o menu aberto
+        subprocess.Popen(["python", "server.py", str(port)])
+        chat_client.chat_client("localhost", port)
+    elif choice == 2:
+        #Você deve saber em que sala deseja entrar
+        port = raw_input('Digite a sala que deseja entrar: ')
+        client.chat("localhost", port)
+    elif choice == 3:
+        #Sai do menu
+        print ("Tchau!")
+    else:    ## default ##
+        print ("Opção inválida. Tente novamente...")

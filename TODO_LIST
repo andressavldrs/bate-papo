@@ -1,12 +1,19 @@
 TO DO 
-1. O servidor suportar vários chats
+1. O servidor suportar vários chats OK
+  1.1. O programa fecha após chamar o servidor (python server.py PORT),
+      ele deve voltar ao programa menu.py ou executar o client.py
+  1.2. As salas devem ser fechadas após o termino do programa 
 
-2. Criar um menu básico com as opções: 
-  2.1. Sair do chat
+2. Criar um menu básico com as opções:  OK
+  2.1. Sair do programa
   2.2. Criar um chat
   2.3. Entrar em um chat disponível
-  
-3. Verificar se é possivel aplicar a criptografia no envio e recebimento de mensagens na parte do cliente
+    2.3.1 Deveria ser possível ver todas as salas disponíveis
+
+3. Deve ser possivel durante a conversa sair do chat e voltar ao menu inicial
+  -> Acredito que seja apenas parar a execução do client.py, pois ele é chamado pelo menu.py 
+     
+4. Verificar se é possivel aplicar a criptografia no envio e recebimento de mensagens na parte do cliente
   -> Eu tive alguns problemas por conta dos dados retornados nâo conterem apenas a mensagem, 
      então você perde o nome e os outros dados do cabeçalho da mensagem. E mesmo tirando continuou dando
      errado, não conseguia deserializar. Enfim, acredito que podemos deixar essa por último

@@ -11,9 +11,11 @@ cor = randint(1,8)
 key = RSA.generate(1024, random_generator)
 RECV_BUFFER = 500000
 
-public_key = key.publickey()
-
+public_key = key.publickey(
 def chat(host, port):
+    #Transforma a string port para int para ser possivel a conexao
+    port = int(port)
+
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.settimeout(2)
 
@@ -25,9 +27,10 @@ def chat(host, port):
         sys.exit()
 
     os.system('cls' if os.name == 'nt' else 'clear') #limpar a tela
-    nome =raw_input("\nOlá, seja bem vindo! Digite seu nome: ")
+    nome = raw_input("\nOlá, seja bem vindo! Digite seu nome: ")
     print 'Conectado a um servidor remoto. Você pode começar a enviar mensagens'
     print
+    #Exibe o nome do usuario sempre em preto e os outros participantes em cores diferentes
     sys.stdout.write(color.printout(nome, color.BLACK)+': '); sys.stdout.flush()
     while 1:
         socket_list = [sys.stdin, s]

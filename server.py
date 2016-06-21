@@ -6,13 +6,15 @@ import os, sys, socket, select
 HOST = ''
 SOCKET_LIST = []
 RECV_BUFFER = 4096
+PORT = 9010
 
-def chat():
+def chat_server():
+    #Recebe a porta para conexao como argumento
     if(len(sys.argv) < 2) :
-        print 'ERRO: Porta não foi definida!'
-    sys.exit()
-    PORT = int(sys.argv[1])
+        print 'Erro: Defina a porta para conexão!'
+        sys.exit()
 
+    PORT = int(sys.argv[1]) #Converte a porta para inteiro
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     server_socket.bind((HOST, PORT))
@@ -78,4 +80,4 @@ def broadcast (server_socket, sock, message):
 
 if __name__ == "__main__":
 
-    sys.exit(chat())
+    sys.exit(chat_server())

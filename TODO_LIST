@@ -1,0 +1,12 @@
+TO DO 
+1. O servidor suportar vários chats
+
+2. Criar um menu básico com as opções: 
+  2.1. Sair do chat
+  2.2. Criar um chat
+  2.3. Entrar em um chat disponível
+  
+3. Verificar se é possivel aplicar a criptografia no envio e recebimento de mensagens na parte do cliente
+  -> Eu tive alguns problemas por conta dos dados retornados nâo conterem apenas a mensagem, 
+     então você perde o nome e os outros dados do cabeçalho da mensagem. E mesmo tirando continuou dando
+     errado, não conseguia deserializar. Enfim, acredito que podemos deixar essa por último

@@ -1,0 +1,26 @@
+Tema 2: Bate papo (Servidor e Cliente)
+
+Descrição: Fornecer servidor e cliente de mensagens, criação de grupos, gerenciamento
+            de contas de usuários e grupos; !envio de arquivos; !bloquear usuários; 
+            !Comunicação criptografada entre os clientes;
+
+Participantes: 
+13/0042943  ANDRESSA RODRIGUES ALVES GALVAO VALADARES
+14/0138374  FELIPE CORDEIRO PIRES MAGALHÃES
+13/0143880  MARCELLA PANTAROTTO
+12/0077019  MATEUS NOGUEIRA BRUMANO CASTRO
+10/0123571  SILAS SOUZA FERNANDES
+
+- Para incializar a aplicação abra o terminal, entre na pasta onde estão os arquivos extraidos de grupo2_bate-papo.rar
+- Inicialize o servidor com o comando: $python3 servidor.py
+- Abra uma ou mais janelas no terminal e inicialize os clientes com o comando: $python3 cliente.py
+- Entre com o nome de usuário.
+- Escolha entre as opções para navegar dentro da aplicação
+  Instruções:
+    Use "listar-" para listar todos os grupos
+    Use "grupo- nome_grupo" para entrar,criar, ou mudar de um grupo
+    Use "manual-" para ver instruções
+    Use "sair-" para sair
+
+
+

@@ -95,16 +95,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">util.Grupo Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Realiza todas operações quando o usuário estiver dentro do grupo.  
+ <a href="classutil_1_1Grupo.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a6359013207ac27b8f2f17bbd227519d3"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classutil_1_1Grupo.html#a6359013207ac27b8f2f17bbd227519d3">__init__</a> (self, <a class="el" href="classutil_1_1Grupo.html#a569e16c0bd769a1e36ecb4affc0a9862">nome</a>)</td></tr>
 <tr class="separator:a6359013207ac27b8f2f17bbd227519d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d2e1ec6f80af2e9fa29a91d91eb2917"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classutil_1_1Grupo.html#a8d2e1ec6f80af2e9fa29a91d91eb2917">boas_vindas_novo</a> (self, do_cliente)</td></tr>
+<tr class="memdesc:a8d2e1ec6f80af2e9fa29a91d91eb2917"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dá boas vindas ao novo cliente ingresso no grupo.  <a href="#a8d2e1ec6f80af2e9fa29a91d91eb2917">More...</a><br /></td></tr>
 <tr class="separator:a8d2e1ec6f80af2e9fa29a91d91eb2917"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abdf37a89a74ccb6c86a3ac5b2cc2bfd9"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classutil_1_1Grupo.html#abdf37a89a74ccb6c86a3ac5b2cc2bfd9">transmissao</a> (self, do_cliente, msg)</td></tr>
+<tr class="memdesc:abdf37a89a74ccb6c86a3ac5b2cc2bfd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Envia a mensagem para todos os clientes que estão ingressos no mesmo grupo.  <a href="#abdf37a89a74ccb6c86a3ac5b2cc2bfd9">More...</a><br /></td></tr>
 <tr class="separator:abdf37a89a74ccb6c86a3ac5b2cc2bfd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a670e2274103090a5f2e48b4e37f51f9d"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classutil_1_1Grupo.html#a670e2274103090a5f2e48b4e37f51f9d">remover_cliente</a> (self, cliente)</td></tr>
+<tr class="memdesc:a670e2274103090a5f2e48b4e37f51f9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove o cliente da lista de sockets inicializados na aplicacao, o que significa que o cliente saiu do programa.  <a href="#a670e2274103090a5f2e48b4e37f51f9d">More...</a><br /></td></tr>
 <tr class="separator:a670e2274103090a5f2e48b4e37f51f9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -114,7 +120,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a569e16c0bd769a1e36ecb4affc0a9862"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classutil_1_1Grupo.html#a569e16c0bd769a1e36ecb4affc0a9862">nome</a></td></tr>
 <tr class="separator:a569e16c0bd769a1e36ecb4affc0a9862"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Realiza todas operações quando o usuário estiver dentro do grupo. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a6359013207ac27b8f2f17bbd227519d3"></a>
 <div class="memitem">
 <div class="memproto">
@@ -166,6 +174,15 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Dá boas vindas ao novo cliente ingresso no grupo. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td></td></tr>
+    <tr><td class="paramname">do_cliente</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="a670e2274103090a5f2e48b4e37f51f9d"></a>
@@ -191,6 +208,15 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Remove o cliente da lista de sockets inicializados na aplicacao, o que significa que o cliente saiu do programa. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td></td></tr>
+    <tr><td class="paramname">cliente</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -223,6 +249,16 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Envia a mensagem para todos os clientes que estão ingressos no mesmo grupo. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td></td></tr>
+    <tr><td class="paramname">do_cliente</td><td></td></tr>
+    <tr><td class="paramname">msg</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
